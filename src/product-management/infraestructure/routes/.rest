@@ -1,0 +1,7 @@
+POST http://localhost:3001/product/add
+content-type: application/json
+
+{
+    "name": "chair",
+    "price": 13.40
+}

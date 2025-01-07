@@ -1,0 +1,7 @@
+POST http://localhost:3001/order/add
+content-type: application/json
+
+{
+    "total": 4,
+    "productId": 1
+}
