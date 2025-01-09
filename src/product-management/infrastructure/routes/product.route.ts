@@ -9,6 +9,6 @@ const productController = new ProductController(productService);
 
 const productRoutes = express.Router();
 
-productRoutes.post('/add', (req, res)=> productController.addProduct(req, res));
+productRoutes.post('/add', (req, res) => productController.addProduct(req, res));
 
 export default productRoutes;
