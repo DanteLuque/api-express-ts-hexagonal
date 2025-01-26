@@ -1,4 +1,4 @@
-import { Product } from "@prisma/client";
+import { Product } from "../product";
 
 export interface IProductRepository{
     addProduct(product: Product): Promise<Product>;

@@ -21,12 +21,15 @@ describe('ProductService', ()=>{
     });
 
     test("addProduct adds a product to the database", async ()=>{
-        const product = new ProductBuilder()
+        const productBuilder = new ProductBuilder()
         .withName("Product_1")
         .withPrice(100.10)
-        .build();
+
+        const args = productBuilder.toArgs();
+        const product = productBuilder.build();
         
-        const addedProduct = await productService.addProduct("Product_1",100.10);
+        const addedProduct = await productService.addProduct(...args);
+        console.log(addedProduct)
 
         expect(addedProduct.name).toBe(product.name);
         expect(addedProduct.price).toBe(product.price);

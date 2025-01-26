@@ -15,6 +15,11 @@ export class OrderBuilder{
         return this;
     }
 
+
+    toArgs(): [number, number] {
+        return [this.productId, this.total];
+      }
+
     build(): Order {
             return new Order(this.productId, this.total);
         }

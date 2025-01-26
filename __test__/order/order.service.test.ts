@@ -23,12 +23,14 @@ describe('OrderService', () => {
   });
 
   test("addOrder adds a order to the database", async () => {
-    const order = new OrderBuilder()
+    const orderBuilder = new OrderBuilder()
       .withProductId(1)
       .withTotal(2)
-      .build();
 
-    const addedOrder = await orderService.addOrder(1, 2);
+      const args = orderBuilder.toArgs();
+        const order = orderBuilder.build();
+
+    const addedOrder = await orderService.addOrder(...args);
 
     expect(addedOrder.productId).toBe(order.productId);
     expect(addedOrder.total).toBe(order.total);

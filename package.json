@@ -11,8 +11,7 @@
     "db:generate": "npx prisma generate",
     "db:migrate": "npx prisma migrate dev",
     "db:deploy": "npx prisma migrate deploy",
-    "db:push": "npx prisma db push",
-    "db:seed": "ts-node src/seed/seed.ts"
+    "db:push": "npx prisma db push"
   },
   "keywords": [],
   "author": "",
@@ -21,11 +20,13 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
+    "@types/supertest": "^6.0.2",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.7",
     "jest": "^29.7.0",
     "jest-mock-extended": "^4.0.0-beta1",
     "prisma": "^6.1.0",
+    "supertest": "^7.0.0",
     "ts-jest": "^29.2.5",
     "ts-node-dev": "^2.0.0",
     "ts-standard": "^12.0.2",

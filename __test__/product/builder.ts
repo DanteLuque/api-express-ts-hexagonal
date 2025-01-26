@@ -14,7 +14,14 @@ export class ProductBuilder{
         return this;
     }
 
+
+    toArgs(): [string, number] {
+        return [this.name, this.price];
+      }
+
     build(): Product {
         return new Product(this.name, this.price);
     }
+
+
 }
